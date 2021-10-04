@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Burrst</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<nav class="navbar fixed-top p-0">
+			<div class="container-fluid p-0">
+			  <a class="navbar-brand py-2 px-5 m-0 logoBg" href="#">
+				  <img src="images/logo.png" height="36px" />
+			  </a>
+			  </div>
+			</div>
+		</nav>
+
+		<div class="container-fluid bodyBg">
+			<div class="row">
+				<div class="col-12 customAlignCenter">
+					<div class="row ms-md-4">
+						<div class="col-12">
+							<h1 class="text-white fst-italic">NFTs Designed For</br>High School & College Athletes</h1>
+						</div>
+						<div class="col-12">
+							<p class="text-white fst-italic mb-5" style="letter-spacing: 2px;">#BurrstOn</p>
+						</div>
+					</div>
+					<div class="row ms-md-4 justify-content-end justify-content-md-start">
+						<div class="col-12 col-md-8 col-xl-5 my-1">
+							<div class="customInputWrapper mx-3 mx-md-0">
+								<input type="email" class="form-control me-2 customInput ps-4" id="txtEmail" placeholder="email@example.com">
+							</div>
+						</div>
+						<div class="col-5 col-md-2 col-xl-1 my-1">
+							<div class="customBtnWrapper mx-3 mx-md-0">
+								<button type="submit" class="btn customBtn" id="btnJoinWaitlist">Join Waitlist</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/myScript.js"></script>
+		<div id="root">
+			<script 
+				src="https://unpkg.com/waitlistapi/dist/widget.js" 
+				id="Waitlist-API-Script" 
+				data-config="{
+					'name': 'w1', 
+					'api_key': 'A4EOLP', 
+					'waitlist_link': 'https://burrst.io/',
+					'config': {'targetElementId': 'root'},
+					'joinWaitlistHeading': ' '
+				}">
+			</script>
+		</div>
+	</body>
+</html>
