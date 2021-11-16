@@ -1,64 +1,424 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Burrst</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-		<nav class="navbar fixed-top p-0">
-			<div class="container-fluid p-0">
-			  <a class="navbar-brand py-2 px-5 m-0 logoBg" href="#">
-				  <img src="images/logo.png" height="36px" />
-			  </a>
-			  </div>
-			</div>
-		</nav>
+<head>
 
-		<div class="container-fluid bodyBg">
-			<div class="row">
-				<div class="col-12 customAlignCenter">
-					<div class="row ms-md-4">
-						<div class="col-12">
-							<h1 class="text-white fst-italic">NFTs Designed For</br>High School & College Athletes</h1>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome To Burrst</title>
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="assets/vender/boostrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="assets/styles/css/styles.css"/>
+
+</head>
+<body>
+	<ul id="scene" class="scene"
+					data-friction-x="0.1"
+					data-friction-y="0.1"
+					data-scalar-x="25"
+					data-scalar-y="15">
+					<li class="layer" data-depth="0.11"><div class="background"></div></li>
+					<li class="layer" data-depth="0.1">
+						<div class=" basket-img">
+							<img src="assets/images/basket.png">
 						</div>
-						<div class="col-12">
-							<p class="text-white fst-italic mb-5" style="letter-spacing: 2px;">#BurrstOn</p>
+					</li>
+					<li class="layer" data-depth="0.12">
+						<div class="wave-red">
+							<img src="assets/images/wave-red.png">
+						</div>
+					</li>
+					<li class="layer" data-depth="0.15">
+						<div class=" player">
+							<img src="assets/images/Player.png">
+						</div>
+					</li>
+		        </ul>
+				<header style="position: absolute; width: 100%;">
+					  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 my-3" style="background-color: transparent !important">
+						<div class="container-fluid">
+							<a class="navbar-brand" href="#">
+								<img src="assets/images/logo.svg">
+							</a>
+						  
+						 
+	
+							<div class="d-flex ">
+								<ul  class="d-flex flex-row navbar-nav">
+									<li class="nav-item">
+									<a class="nav-link" type="button" data-bs-toggle="modal" href="#missionModal" role="button" >Mission</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" type="button" data-bs-toggle="modal" href="#manifesto" role="button">Manifesto</a>
+								</li>
+								</ul>
+							
+						  </div>
+						</div>
+					  </nav>
+					</header>
+					
+				<section style="display: flex;height: 100vh;align-items: center;">
+					<div class="social-link">
+						<ul>
+							<li>
+								<a href="">
+									<img  src="assets/images/twitter.svg">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="assets/images/instagram.svg">
+								</a>
+							</li>
+							<li>
+								<a href="https://linktr.ee/gsapkin">#BurrstOn</a>
+							</li>
+						</ul>
+					</div>
+					<div class="container position-relative">
+						<div class="row">
+							<div class="col-lg-8 col-md-12 col-sm-12">
+								<div class="slider-heading">
+									<h1>Own <span style="color: #f80527;">Digital</span> <br><span style="color: #f80527;">Assets</span> of Your <br>Favorite Athlete</h1>
+									<h4>Made for Athletes. Designed by Athletes.</h4>
+									<div class="type-wrap">
+										<span id="typed" style="white-space:pre;" class="typed">
+										</span>
+									</div>
+									<button type="button" class="btn btn-light"data-bs-toggle="modal" href="#signupModal" role="button">Sign up</button>
+									
+								</div>
+							</div>
+							<!-- <div class="col-lg-4">
+								
+							</div> -->
 						</div>
 					</div>
-					<div class="row ms-md-4 justify-content-end justify-content-md-start">
-						<div class="col-12 col-md-8 col-xl-5 my-1">
-							<div class="customInputWrapper mx-3 mx-md-0">
-								<input type="email" class="form-control me-2 customInput ps-4" id="txtEmail" placeholder="email@example.com">
+				</section>
+				<!-- ============ sign up modal========== -->
+				<div class="signup_modal modal fade" id="signupModal" aria-hidden="true" aria-labelledby="signupModal" tabindex="-1">
+					<div class="modal-dialog modal-fullscreen">
+					  <div class="modal-content">
+						  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 my-3" style="background-color: transparent !important">
+						<div class="container-fluid">
+							<a class="navbar-brand" href="#">
+								<img src="assets/images/logo.svg">
+							</a>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							  </button>
+						  <div class="d-flex">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<div class="close-container" type="button" data-bs-dismiss="modal" aria-label="Close">
+										<div class="leftright"></div>
+										<div class="rightleft"></div>
+										<label class="close">close</label>
+									  </div>
+								</li>
+								
+							  </ul>
 							</div>
 						</div>
-						<div class="col-5 col-md-2 col-xl-1 my-1">
-							<div class="customBtnWrapper mx-3 mx-md-0">
-								<button type="submit" class="btn customBtn" id="btnJoinWaitlist">Join Waitlist</button>
+					  </nav>
+					
+						
+					  <section style="display: flex; height: 100vh; align-items: center;">
+						<div class="container position-relative">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="signup-heading">
+											<h1>NFTs Designed For
+												High School <br>& College Athletes</h1>
+												<p>#BurrstOn</p>
+										</div>
+									</div>
+									
+									<div class="row d-flex justify-content-center">
+										<div class="col-12 col-md-8 col-xl-5 my-1 p-0">
+											<div class="customInputWrapper mx-3 mx-md-0">
+												<input type="email" class="form-control me-2 customInput ps-4" id="txtEmail" placeholder="email@example.com">
+											</div>
+										</div>
+										<div class="col-5 col-md-2 col-xl-1 my-1 p-0">
+											<div class="customBtnWrapper mx-3 mx-md-0">
+												<button type="submit" class="btn customBtn" id="btnJoinWaitlist">Join Waitlist</button>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
+					
+					</section>
+					  </div>
 					</div>
-				</div>
-			</div>
-		</div>
+				  </div>
+				  <!-- ============sign up modal========== -->
+				  <!-- ============ mission modal========== -->
+				<div class="signup_modal modal fade" id="missionModal" aria-hidden="true" aria-labelledby="missionModal" tabindex="-1">
+					<div class="modal-dialog modal-fullscreen">
+					  <div class="modal-content">
+						  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 my-3" style="background-color: transparent !important">
+						<div class="container-fluid">
+							<a class="navbar-brand" href="#">
+								<img src="assets/images/logo.svg">
+							</a>
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							  </button>
+						  <div class="d-flex">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<div class="close-container" type="button" data-bs-dismiss="modal" aria-label="Close">
+										<div class="leftright"></div>
+										<div class="rightleft"></div>
+										<label class="close">close</label>
+									  </div>
+								</li>
+								
+							  </ul>
+							</div>
+						</div>
+					  </nav>
+					
+						
+					  <section style="display: flex; height: 100vh; align-items: center;">
+						<div class="container position-relative">
+							<div class="row">
+								<div class="col-lg-6 offset-lg-3 col-md-12 offset-md-3">
+									<div class="row">
+										<div class="misssion-heading">
+											<h1>Our Mission</h1>
+											<p>Allowing athletes to take advantage of their NIL rights by partnering up with us to release NFTs into the digital world. We understand the hardwork athletes put in and believe they should be able to promote themselves. Burrst is a sports community that encourages leadership, growth, and loyalty. </p>
+										</div>
+										<div class="misssion-heading">
+											<h1>Our Focus</h1>
+											<p>
+												We partner up with athletes to create an NFT that is unique and innovative. An athlete’s NIL is important as they continue in their career and our creativity helps them separate from the pack. Building digital assets one athlete at a time.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					</section>
+					  </div>
+					</div>
+				  </div>
+				  <!-- ============mission modal========== -->
+				  <!-- ============ Manifesto modal========== -->
+				<div class="signup_modal modal fade" id="manifesto" aria-hidden="true" aria-labelledby="manifesto" tabindex="-1">
+					<div class="modal-dialog modal-fullscreen">
+					  <div class="modal-content">
+						  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 my-3" style="background-color: transparent !important">
+						<div class="container-fluid">
+							<a class="navbar-brand" href="#">
+								<img src="assets/images/logo.svg">
+							</a>
+							
+						  <div class="d-flex">
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<div class="close-container" type="button" data-bs-dismiss="modal" aria-label="Close">
+										<div class="leftright"></div>
+										<div class="rightleft"></div>
+										<label class="close">close</label>
+									  </div>
+								</li>
+								
+							  </ul>
+							</div>
+						</div>
+					  </nav>
+					
+						
+					  <section >
+						<div class="container position-relative">
+							<div class="row">
+								<div class="col-lg-8 offset-lg-2">
+									<div class="row">
+										<div class="manifesto-heading mt-5">
+											<h1> Burrst’s Manifesto</h1>
+											<p>
+												We love playing & watching sports.
+                                               <br>
+												Sports allow us to bond.
+												<br>
+												Sports allow for new relationships to form. 
+												<br>
+												Sports spark up conversations. 
+												<br>
+												Whether you are at a basketball game in Chicago or Australia it doesn’t matter.
+												<br>
+												You can relate with people at the game. 
+                                                <br>
+												Games are streamed from all over the world. 
+												<br>
+												The digital era allows you to watch a game at your fingertips. 
+												That is power. 
+												<br>
+												Athletes do not have control over their NIL 
+												<br>
+												For decades high school and college athletes would have to abide by rules and laws on how, when, and what they can promote of themselves. 
+												<br>
+												They could never be compensated for their name, image, or likeness. 
+												<br>
+												Every single day an athlete would make a sacrifice to sharpen and perfect their game. 
+												<br>
+												It was a choice every athlete made without any compensation. 
+												<br>
+												Focus, grit, discipline, courage and determination to get to the next level. At the professional level they would be paid based on their value. 
+											</p>
+										</div>
+										<div class="manifesto-heading">
+											<h1>But why not sooner? </h1>
+											<p>
+												Burrst is here to change that 
 
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="js/bootstrap.bundle.min.js"></script>
-		<script src="js/myScript.js"></script>
-		<div id="root">
-			<script 
-				src="https://unpkg.com/waitlistapi/dist/widget.js" 
-				id="Waitlist-API-Script" 
-				data-config="{
-					'name': 'w1', 
-					'api_key': 'A4EOLP', 
-					'waitlist_link': 'https://burrst.io/',
-					'config': {'targetElementId': 'root'},
-					'joinWaitlistHeading': ' '
-				}">
-			</script>
-		</div>
-	</body>
+												We believe every athlete should be able to promote themselves with NIL and be paid in return. 
+                                                <br>
+												They shouldn’t have to wait until being a professional athlete because what about the athletes who didn’t make it? 
+												<br>
+												The sacrifice to put in all that work and be cut short. 
+                                                <br>
+												We are here to encourage athletes to still play and work hard but to be able to create digital assets they get paid on. 
+
+												We are here to design NFTs with athletes that show the world they are more than just an athlete. 
+
+												Made for athletes. Designed by athletes. The time is now. 
+                                                <br>
+												#BurrstOn
+											</p>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					
+					</section>
+					  </div>
+					</div>
+				  </div>
+				  <!-- ============Manifesto modal========== -->
+				 
+				
+
+	
+	</div>
+<!-- Scripts -->
+
+<script src="assets/vender/boostrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/scripts/js/libraries.min.js"></script>
+<script src="assets/scripts/js/jquery.parallax.js"></script>
+
+<script>
+
+// jQuery Selections
+var $html = $('html'),
+		$container = $('#container'),
+		$prompt = $('#prompt'),
+		$toggle = $('#toggle'),
+		$about = $('#about'),
+		$scene = $('#scene');
+
+// Hide browser menu.
+(function() {
+	setTimeout(function(){window.scrollTo(0,0);},0);
+})();
+
+// Setup FastClick.
+FastClick.attach(document.body);
+
+// Add touch functionality.
+if (Hammer.HAS_TOUCHEVENTS) {
+	$container.hammer({drag_lock_to_axis: true});
+	_.tap($html, 'a,button,[data-tap]');
+}
+
+// Add touch or mouse class to html element.
+$html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+
+// Resize handler.
+(resize = function() {
+	$scene[0].style.width = window.innerWidth + 'px';
+	$scene[0].style.height = window.innerHeight + 'px';
+	if (!$prompt.hasClass('hide')) {
+		if (window.innerWidth < 600) {
+			$toggle.addClass('hide');
+		} else {
+			$toggle.removeClass('hide');
+		}
+	}
+})();
+
+// Attach window listeners.
+window.onresize = _.debounce(resize, 200);
+window.onscroll = _.debounce(resize, 200);
+
+function showDetails() {
+	$about.removeClass('hide');
+	$toggle.removeClass('i');
+}
+
+function hideDetails() {
+	$about.addClass('hide');
+	$toggle.addClass('i');
+}
+
+// Listen for toggle click event.
+$toggle.on('click', function(event) {
+	$toggle.hasClass('i') ? showDetails() : hideDetails();
+});
+
+// Pretty simple huh?
+$scene.parallax();
+
+// Check for orientation support.
+setTimeout(function() {
+	if ($scene.data('mode') === 'cursor') {
+		$prompt.removeClass('hide');
+		if (window.innerWidth < 600) $toggle.addClass('hide');
+		$prompt.on('click', function(event) {
+			$prompt.addClass('hide');
+			if (window.innerWidth < 600) {
+				setTimeout(function() {
+					$toggle.removeClass('hide');
+				},1200);
+			}
+		});
+	}
+},1000);
+
+
+// Facebook stuff.
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+<script src="assets//scripts/js/myScript.js"></script>
+<div id="root">
+	<script 
+		src="https://unpkg.com/waitlistapi/dist/widget.js" 
+		id="Waitlist-API-Script" 
+		data-config="{
+			'name': 'w1', 
+			'api_key': 'A4EOLP', 
+			'waitlist_link': 'https://burrst.io/',
+			'config': {'targetElementId': 'root'},
+			'joinWaitlistHeading': ' '
+		}">
+	</script>
+</body>
 </html>
